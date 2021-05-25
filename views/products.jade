@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    h1= title
+    br
+
+    form(action="/showproducts", method="get")
+     table.table.table-striped.table-bordered
+        tr 
+          td Name 
+          td Price 
+        if(typeof items === "undefined")
+          tr 
+            td 
+        else 
+          each item in items 
+            tr 
+              td #{item.name}
+              td #{item.price}
+     button.btn(type="submit") Get Items
+    hr
+    form.well(action="/addproduct", method="post")
+      label Item Name: 
+      input(name="name", typeof="textbox")
+      br
+      label Price: 
+      input(name="price", typeof="textbox")
+      br
+      button.btn(type="submit") Add Item
+  
