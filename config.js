@@ -1,8 +1,8 @@
 const config = {};
 
-config.host = process.env.HOST || "https://cosmosnodejs.documents.azure.com:443/";
+config.host = process.env.HOST || "[cosmos uri]";
 config.authKey =
-  process.env.AUTH_KEY || "LPzSBAXb8bw7PpEFBra4ZSNoYUbHRIAxMyKTNFWUah3Z53Mn1HiOfzZnhYi7AvpjHDOt0eWTsf3PS9CsRQZ83A==";
+  process.env.AUTH_KEY || "[cosmos primary key]";
 config.databaseId = "Products";
 config.containerId = "Items";
 
